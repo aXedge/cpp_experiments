@@ -3,19 +3,20 @@
 #define __PERSON_H__
 #include <string>
 
-#define MAX_PHONE_DIGITS	10
+#define MAX_PHONE_DIGITS    10
 class Person
 {
     private:
-        std::string 	first_name;
-        std::string 	last_name;
-        std::string 	race;
-        int 		age;
+        int             age;
 
     protected:
-    int		phone_number[MAX_PHONE_DIGITS];
+        int             phone_number[MAX_PHONE_DIGITS];
 
     public:
+        std::string     first_name;
+        std::string     last_name;
+        std::string     race;
+
         Person();
 
         Person(std::string fName, std::string lName);

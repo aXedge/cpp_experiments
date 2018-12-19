@@ -21,6 +21,8 @@ _OBJ = main.o \
 
 OBJ = $(patsubst %,$(BIN_DIR)/%,$(_OBJ))
 
+all: dirs objs
+
 $(BIN_DIR)/%.o: $(SRC_DIR)/%.cpp $(DEPS)
 	$(CC) -c -o $@ $< $(CFLAGS)
 
@@ -29,8 +31,6 @@ objs: $(OBJ)
 
 dirs:
 	mkdir -p $(BIN_DIR)
-
-all: dirs objs
 
 .PHONY: clean
 
