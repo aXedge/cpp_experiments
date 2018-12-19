@@ -9,52 +9,59 @@ Person::Person()
 
 Person::Person(std::string fName, std::string lName)
 {
-    firstName = fName;
-    lastName = lName;
+    first_name = fName;
+    last_name = lName;
 }
 
 Person::Person(std::string fName, std::string lName, int age)
 {
-    firstName = fName;
-    lastName = lName;
-
+    first_name = fName;
+    last_name = lName;
     age = age;
 }
 
 
 Person::~Person()
 {
-    std::cout << "Destructor called as a result of the delete keyword being used" << std::endl;
+    std::cout << __func__ << " Destructor called as a result of the delete keyword being used" << std::endl;
 }
 
 void Person::SetFirstName(std::string fName)
 {
-    this->firstName = fName;
+    this->first_name = fName;
 }
 
 std::string Person::GetFirstName()
 {
-    return this->firstName;
+    return this->first_name;
 }
 
 void Person::SetLastName(std::string lName)
 {
-    this->lastName = lName;
+    this->last_name = lName;
 }
 
 std::string Person::GetLastName()
 {
-    return this->lastName;
+    return this->last_name;
 }
 
+void Person::SetAge( int age )
+{
+    this->age = age;
+}
+
+int Person::GetAge( void )
+{
+    return this->age;
+}
 
 void Person::SayHello()
 {
     std::cout << "Hello" << std::endl;
 }
 
-
-void OutputAge()
+void Person::OutputAge()
 {
-    std::cout << "I am " << this-<age << " years old" << std::endl;
+    std::cout << "I am " << this->age << " years old" << std::endl;
 }

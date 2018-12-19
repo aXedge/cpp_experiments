@@ -2,19 +2,19 @@
 #ifndef __STUDENT_H__
 #define __STUDENT_H__
 
-#include "Person.h"
+#include "person.h"
+
 class Student :
         public Person
 {
     public:
         Student();
         ~Student();
-    
-        void setAge(int);
-        int getAge();
+        void SetAge(int);
+        int GetAge();
         void SayHello();
-	virtual void OutputIdentity();
-	virtual void OutputAge();
+        virtual void OutputIdentity();
+        virtual void OutputAge();
 };
 
 #endif /* ifndef __STUDENT_H__ */
